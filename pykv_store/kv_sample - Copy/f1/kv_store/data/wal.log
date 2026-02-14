@@ -1,0 +1,6 @@
+{"operation": "PUT", "key": "d", "old_value": null, "new_value": {"value": "23", "expiry": 1771090403.3354676}, "timestamp": 1771090323.3364613}
+{"operation": "UPDATE", "key": "d", "old_value": {"value": "23", "expiry": 1771090403.3354676}, "new_value": {"value": "45", "expiry": 1771090403.3354676}, "timestamp": 1771090326.3147616}
+{"operation": "PUT", "key": "ganesha", "old_value": null, "new_value": {"value": "23", "expiry": 1771091318.9427223}, "timestamp": 1771091238.9432108}
+{"operation": "UPDATE", "key": "ganesha", "old_value": {"value": "23", "expiry": 1771091318.9427223}, "new_value": {"value": "123", "expiry": 1771091318.9427223}, "timestamp": 1771091264.5479803}
+{"operation": "PUT", "key": "ganesha", "old_value": null, "new_value": {"value": "23", "expiry": 1771091405.3795588}, "timestamp": 1771091325.380093}
+{"operation": "DELETE", "key": "ganesha", "old_value": {"value": "23", "expiry": 1771091405.3795588}, "new_value": null, "timestamp": 1771091333.1408014}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KV Store Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🔐 Py Key-Value Store</h1>
+    <p class="subtitle"> Persistent Key-Value Store</p>
+
+    <div class="cards">
+
+        <!-- PUT -->
+        <div class="card">
+            <h2>💾PUT</h2>
+
+<input type="text" id="putKey" placeholder="Enter Key">
+<input type="text" id="putValue" placeholder="Enter Value">
+<input type="number" id="putTTL" placeholder="Enter TTL in seconds (optional)">
+
+<button onclick="putData()">Save</button>
+            <p class="result" id="putResult"></p>
+        </div>
+
+        <!-- GET -->
+        <div class="card">
+            <h2>📥GET</h2>
+            <input type="text" id="getKey" placeholder="Enter Key">
+            <button onclick="getData()">Fetch</button>
+            <pre class="result" id="getResult"></pre>
+        </div>
+
+        <!-- PUT -->
+        <div class="card">
+            <h2>🔁UPDATE</h2>
+            <input type="text" id="updateKey" placeholder="Enter Key">
+            <input type="text" id="updateValue" placeholder="Enter Value">
+            <button onclick="updateData()">update</button>
+            <p class="result" id="updateResult"></p>
+        </div>
+
+        <!-- DELETE -->
+        <div class="card danger">
+            <h2>🗑️DELETE</h2>
+            <input type="text" id="deleteKey" placeholder="Enter Key">
+            <button onclick="deleteData()">Delete</button>
+            <p class="result" id="deleteResult"></p>
+        </div>
+
+
+
+    <div class="card">
+    <h2>⏳TTL Remaining</h2>
+    <input type="text" id="ttlKey" placeholder="Enter Key">
+    <button onclick="getTTL()">Check TTL</button>
+    <p class="result" id="ttlResult"></p>
+
+    </div>
+
+
+
+       <div class="card">
+    <h2>All Keys</h2>
+    <button onclick="getKeys()">Load Keys</button>
+    <pre class="result" id="keysResult"></pre>
+    </div>
+            <div class="card">
+    <h2>WAL Logs</h2>
+    <button onclick="getLogs()">View Logs</button>
+    <pre class="result" id="logsResult"></pre>
+</div>
+
+
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

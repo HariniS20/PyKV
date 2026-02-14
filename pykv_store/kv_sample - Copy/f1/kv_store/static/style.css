@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background: linear-gradient(135deg,#2fa7ed,#1c9eea);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.container{
+    width:1000px;
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255, 255, 255, 0.75);
+    backdrop-filter:blur(20px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+    color:#1a1a1a;
+    animation:fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+h1{
+    text-align:center;
+    margin-bottom:10px;
+    font-weight:600;
+    color:#0d47a1;
+}
+
+.subtitle{
+    text-align:center;
+    margin-bottom:40px;
+    opacity:0.8;
+    color:#1565c0;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:25px;
+    max-height:80vh;
+    overflow-y:auto;
+}
+.card{
+    padding:18px;
+    border-radius:18px;
+    background:rgba(255,255,255,0.9);
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+    min-height:200px;
+}
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 35px rgba(0,0,0,0.15);
+}
+
+.card h2{
+    margin-bottom:20px;
+    font-weight:500;
+    color:#1976d2;
+}
+.card:last-child{
+    grid-column:2 / 3;
+}
+input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:10px;
+    border:1px solid #bbdefb;
+    outline:none;
+    font-size:14px;
+}
+
+input:focus{
+    border-color:#2196f3;
+    box-shadow:0 0 8px rgba(33,150,243,0.4);
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border-radius:30px;
+    border:none;
+    font-weight:600;
+    cursor:pointer;
+    background:linear-gradient(45deg,#2196f3,#42a5f5);
+    color:white;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px rgba(33,150,243,0.5);
+}
+
+.danger button{
+    background:linear-gradient(45deg,#ff6b6b,#ff3d3d);
+}
+
+.result{
+    margin-top:15px;
+    padding:10px;
+    border-radius:10px;
+    background:#e3f2fd;
+    font-size:13px;
+    min-height:40px;
+    color:#0d47a1;
+}
